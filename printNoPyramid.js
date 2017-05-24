@@ -1,18 +1,10 @@
-/**
- * Auto-generated code below aims at helping you parse
- * the standard input according to the problem statement.
- **/
+const n = parseInt(readline());
 
-var n = parseInt(readline());
+print(new Array(n).fill(n).map((e, i) => 
+  new Array(i + 1).fill(n).join('')
+).join('\n'));
 
-// Write an action using print()
-// To debug: printErr('Debug messages...');
-
-print(new Array(n).fill(n).map((e, i) => {
-  return new Array(i + 1).fill(n).join('')
-}).join('\n'));
-
-// Output
+// Output when n = 3
 // 3
 // 33
 // 333
