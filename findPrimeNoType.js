@@ -1,0 +1,9 @@
+n=readline()
+s=0
+d=(m,n=0,c=0)=>n>m?c==2:d(m,++n,m%n==0?++c:c)
+f=j=>{for(i=n;;i+=j)
+if(d(i)){s+=i;break}}
+f(-1)
+f(1)
+r=s/2
+print(n==r?'BALANCED':n<r?'WEAK':'STRONG');
