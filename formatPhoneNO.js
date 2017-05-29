@@ -1,0 +1,1 @@
+print(readline().match(/\d/g).join``.replace(/8790|879/,0).match(/.{1,3}/g).join` `)
