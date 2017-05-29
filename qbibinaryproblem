@@ -1,0 +1,39 @@
+import Glibc
+import Foundation
+
+public struct StderrOutputStream: TextOutputStream {
+    public mutating func write(_ string: String) { fputs(string, stderr) }
+}
+public var errStream = StderrOutputStream()
+
+/**
+ * Auto-generated code below aims at helping you parse
+ * the standard input according to the problem statement.
+ **/
+
+let n = Int(readLine()!)!
+
+// Write an action using print("message...")
+// To debug: print("Debug messages...", to: &errStream)
+var x = n
+var cv = ["O", "A", "E", "I"]
+var cc = ["H", "B", "K", "D"]
+var res = ""
+
+    var v = cv[x%4]
+    x = x>>2
+    var c = cc[x%4]
+    x = x>>2
+    // print("\(c)\(v)");
+    res = "\(c)\(v)" + res
+
+
+while x > 0 {
+    var v = cv[x%4]
+    x = x>>2
+    var c = cc[x%4]
+    x = x>>2
+    // print("\(c)\(v)");
+    res = "\(c)\(v)" + res
+}
+print(res)
