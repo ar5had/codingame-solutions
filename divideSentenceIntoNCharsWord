@@ -1,0 +1,5 @@
+#!/bin/bash
+read s
+read n
+echo $s|tr -d ' '|sed -r "s/(.{$n})/\1\n/g"|head -c -1
+# whitespace is removed first

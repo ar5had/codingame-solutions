@@ -1,0 +1,3 @@
+#!/bin/bash
+read S
+echo $S|tr '[A-Z][a-z]' '[a-z][A-Z]'
